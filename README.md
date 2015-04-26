@@ -21,7 +21,7 @@ Where else would you start? http://rubyonrails.org/
 
 Go to the "Get Started" section: http://rubyonrails.org/download/
 
-# Install Software
+## Install Software
 Follow the rbenv Installation found here: https://github.com/sstephenson/rbenv#installation
 
 I also used this page for notes on how to install rbenv for all users: http://blakewilliams.me/blog/system-wide-rbenv-install
@@ -58,3 +58,14 @@ echo "2.2.2" > ~/omniscience/.ruby-version
 ```
 gem install rails
 ```
+
+## Create our Rails app
+```
+cd ~/omniscience/
+rails new .
+# Enable therubyracer in Gemfile
+rails server
+```
+
+
+
