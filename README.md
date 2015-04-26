@@ -77,11 +77,22 @@ rails generate model run command:string filter:string start_at:datetime end_at:d
 rails generate model host_result output:string exit_status:integer start_at:datetime end_at:datetime run:references host:references
 rake db:migrate
 ```
-COMMIT: https://github.com/wmavis/omniscience/commit/?
+COMMIT: https://github.com/wmavis/omniscience/commit/a3f1438c5a77b928a7d586cbf017d22dd642139a
+
+## Adding our first controller
+```
+rails generate controller run index
+```
 
 ## Adding our first route
-
-
-
+Change the following line to `config/routes.rb`
+```
+get 'run/index'
+```
+to:
+```
+root 'run#index'
+```
+COMMIT: https://github.com/wmavis/omniscience/commit/?
 
 
