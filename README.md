@@ -66,6 +66,22 @@ rails new .
 # Enable therubyracer in Gemfile
 rails server
 ```
+COMMIT: https://github.com/wmavis/omniscience/commit/d4c6599ce6e1a060bd1cc9e6f6a85a7085495626 
+
+## Adding our models
+```
+rails generate model host hostname:string
+rails generate model tag tagname:string
+rails generate migration CreateJoinTableHostTag host tag
+rails generate model run command:string filter:string start_at:datetime end_at:datetime
+rails generate model host_result output:string exit_status:integer start_at:datetime end_at:datetime run:references host:references
+rake db:migrate
+```
+COMMIT: https://github.com/wmavis/omniscience/commit/?
+
+## Adding our first route
+
+
 
 
 
